@@ -1,12 +1,61 @@
 /* 
     Document   : style
-    Created on : 1 dÃ©c. 2012, 10:25:52
+    Created on : 1 déc. 2012, 10:25:52
     Author     : Valooj
     Description:
         Purpose of the stylesheet follows.
+    Dans une feuille de style on part toujours, du plus génréral pour aller vers
+    le plus particulier.
 */
 
 root { 
     display: block;
+}
+html {
+    font-size: 100%; /* Évite un bug d'IE 6-7.  */
+}
+img{
+    
+}
+a{
+    
+}
+body {
+    margin: 0;
+    padding: 1em; /* Remettre à zéro si nécessaire. */
+    font-family: Helvitica,Verdana,Arial,sans-serif;  /* Plusieurs choix de police nécéssaire  */
+    font-size: .8em; /* À adapter pour la police choisie. */
+    line-height: 1.4; /* À adapter au design. */
+    color: black;
+    background-color: #ff9999;
+    background-position: center center;
+    text-align: justify;
+    border-style: solid;
+    border-width: 1em;
+    border-color: silver;
+}
+div#header{
+    
+    background-color: #9999ff;
+    border-style: dashed;
+    border-width: 1px;
+    width: 102em; /*au max*/
+    height: 15em; /*au max*/
+}
+div#content{
+    
+    background-color: #cccc00;    
+    border-width: 1px;
+    border-style: double;
+    width: 102em; /*au max*/
+    height: 15em; 
+}
+div#footer{
+    
+    background-color: #cc66ff;
+    border-style: ridge;
+    border-width: 1px;
+    width: 102em; /*au max*/
+    height: 15em; /*au max*/
 }
 
