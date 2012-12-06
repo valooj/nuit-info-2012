@@ -20,6 +20,19 @@ img{
 a{
     
 }
+ul{
+    list-style: none;    
+        
+}
+li{
+    width: 5em;
+    height: 5em;
+    border-style: dashed;
+    border-width: 3px;
+    display: inline-block;
+    background-color: #ccccff;
+    
+}
 body {
     margin: 0;
     padding: 1em; /* Remettre à zéro si nécessaire. */

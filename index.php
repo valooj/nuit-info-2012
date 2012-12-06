@@ -10,16 +10,37 @@ and open the template in the editor.
         <title>Nom du site éé</title>
     </head>
     <body>
-        <div id="header"><!-- code destiné à l'entête du site -->
-            <?php echo "le site pour la nuit de l'info de l'équipe M'Bot est en cours de construction !";?>
-            <img src="minibot2.png" alt="Photo du logo M'Bot" />
-            <?php echo "blabla du header";?>
-        </div>
-        <div id="content"> <!-- code destiné au corps du site  -->
-            <?php echo "blabla du corps de texte";?>
-        </div>
-        <div id="footer"> <!-- code destiné au bas de page -->
-            <?php echo "blabla du footer";?>
-        </div>        
+        <?php
+        include("header.php");
+        $page = isSet($_GET['page']) ? $_GET['page'] : NULL;
+
+        if ($page == null) {
+            include("news.php");
+        } else {
+
+            switch ($page) {
+
+                case 'news':
+                    include("news.php");
+                    break;
+               case 'creationArticle':
+                   include ("creationArticle.php");
+                   break;
+               case 'rechercheClient':
+                   include ("rechercheClient.php");
+                   break;
+               case 'resultatrecherche':
+                   include ("resultatRecherche.php");
+                   break;
+                default:
+                    include("erreurs.php");
+                    break;
+            }
+        }
+        include("footer.php");
+        ?>
+
+
+
     </body>
 </html>
