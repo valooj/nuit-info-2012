@@ -1,8 +1,12 @@
- <div id="footer"> <!-- code destinÈ au bas de page -->
-            <?php echo "blabla du footer";?>
-     		<li>
-            	<a href="index.php"> Accueil</a>
-                <a href="#"> Mentions lÈgales</a>
-                <a href="#"> Aide</a>
-            </li>
- </div>  
+<li>
+	<a href="index.php" >Accueil </a>
+    <a href="#" >Accessibilit√© </a>
+    <a href="aide.html" >Aide </a>
+</li>
+<p>
+Association : M'Bot
+</p>
+<p>
+Si√®ge social : ENSISA
+</p>
+<img src="#">
