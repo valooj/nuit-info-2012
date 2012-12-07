@@ -31,7 +31,7 @@ li{
     border-width: 3px;
     display: inline-block;
     background-color: #ccccff;
-    
+   
 }
 body {
     margin: 0;
@@ -40,35 +40,55 @@ body {
     font-size: .8em; /* À adapter pour la police choisie. */
     line-height: 1.4; /* À adapter au design. */
     color: black;
-    background-color: #ff9999;
+    background-image: url("images/Grapess.jpg");
+    background-attachment: fixed;
     background-position: center center;
     text-align: justify;
     border-style: solid;
     border-width: 1em;
     border-color: silver;
+    
 }
 div#header{
     
-    background-color: #9999ff;
+    
+    
+    opacity: 0.6;
+    background-image: url("images/boussole.png");
     border-style: dashed;
     border-width: 1px;
-    width: 102em; /*au max*/
+    width: 1000px; /*au max*/
     height: 15em; /*au max*/
+    background-color: #efbe75;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000;
 }
 div#content{
     
-    background-color: #cccc00;    
+    opacity: 0.6;
     border-width: 1px;
     border-style: double;
-    width: 102em; /*au max*/
+    width: 1000px; /*au max*/
     height: 80em; 
+    background-color: #efbe75;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000;
+    
+    
 }
 div#footer{
     
     background-color: #cc66ff;
     border-style: ridge;
     border-width: 1px;
-    width: 102em; /*au max*/
+    width: 1000px; /*au max*/
     height: 15em; /*au max*/
+    font-family: Arial,Helvetica,sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000;
 }
 
