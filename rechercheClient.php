@@ -23,10 +23,10 @@
             <select name="departement" id="departement">
                 <?php
                 while ($donnees = $reponse->fetch()) {
-                    echo '<optgroup label="', $donnees['nom'], '">', $donnees['nom'], '</option>';
-                    $reponse2 = $bdd->query('SELECT * FROM `departement` ORDER BY `numero`');
+                    echo '<optgroup label="', $donnees['region'], '">', $donnees['region'], '</optgroup>';
+                    $reponse2 = $bdd->query('SELECT * FROM `article`');
                     while ($donnees2 = $reponse2->fetch()) {
-                        echo '<option value="', $donnees2['nom'], '">', $donnees2['nom'], '</option>';
+                        echo '<option value="', $donnees2['departement'], '">', $donnees2['departement'], '</option>';
                     }
                 }
                 ?>

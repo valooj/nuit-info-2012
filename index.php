@@ -7,7 +7,7 @@ and open the template in the editor.
     <head>
         <link rel="stylesheet" type="text/css" media="all" href="style.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-6">
-        <title>Nom du site éé</title>
+        <title>La Boussole Française</title>
     </head>
     <body>
         <?php
