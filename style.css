@@ -50,11 +50,7 @@ body {
     
 }
 div#header{
-    
-    
-    
-    opacity: 1;
-    background-image: url("images/boussole.png");
+    opacity: 1;    
     /*border: 20px #ffffff outset ;
     border-style: solid;
     border-width: 1px;*/
@@ -64,14 +60,12 @@ div#header{
     /*background-color: #efbe75;*/
     margin-left: auto;
     margin-right: auto;
-    width: 1000;
+    width: 1000px;
 }
 div#content{
     
     opacity: 0.6;
-    border-width: 1px;
-    border: 10px #ffffff outset;
-    border-style: double;
+    border-radius: 25px; 
     width: 1000px; /*au max*/
     height: 80em; 
     background-color: #efbe75;
@@ -108,3 +102,6 @@ div#footer{
     width: 1000;
 }
 
+#header td img {
+    display: block;
+}

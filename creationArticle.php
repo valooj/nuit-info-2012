@@ -1,11 +1,11 @@
 <div id="content"> <!-- code destiné au corps du site  -->
 
-    <form method="post">
+    <form method="post" action="traitement.php" id="form">
 
         <?php
         try {
             // On se connecte à  MySQL
-            $bdd = new PDO('mysql:host=localhost;dbname=ndi2012', 'root', '');
+            $bdd = new PDO('mysql:host=localhost;dbname=fabienvamndi12', 'root', '');
         } catch (Exception $e) {
             // En cas d'erreur, on affiche un message et on arrÃªte tout
             die('Erreur : ' . $e->getMessage());
@@ -13,7 +13,7 @@
         // Si tout va bien, on peut continuer
         // On rÃ©cupÃ¨re le derbier article de la table news
         // On affiche chaque entrée une à  une
-        $reponse = $bdd->query('SELECT * FROM `region`');
+        $reponse = $bdd->query('SELECT * FROM `article`');
         ?>
 
         <label for="region">Region: </label>
@@ -26,7 +26,7 @@
             }
         }
         ?>
-
+        <p class="first">
         théme:<br /> 
         <input type="radio" name="theme" value="evenement" id="evenement" />
         <label for="evenement">Evènement</label>
@@ -52,8 +52,9 @@
         <input type="radio" name="theme" value="act_sport" id="act_sport" />
         <label for="act_sport">Activités sportives</label>
         <br />
-
-        théme:<br /> 
+</p>
+          <p class="first">
+        age:<br /> 
         <input type="radio" name="age" value="enfant" id="enfant" />
         <label for="enfant">Enfant</label>
         <br />
@@ -66,6 +67,7 @@
         <input type="radio" name="age" value="adultes" id="ados" />
         <label for="ados">adultes</label>
         <br />
+        </p>
 
         <label for="Description">Description</label> <textarea name="description" id="description"
                                                                rows="10" cols="50"></textarea>
