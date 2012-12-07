@@ -17,14 +17,13 @@
 
 
 
-    <form method="post" action="traitement.php">
-        <p>
-            <p>
+    <form method="post" action="traitement.php" id="form">
+            <p class="first">
             <label for="pays">Choisissez votre destination </label><br />
             <select name="département" id="département">
                 <?php
                 while ($donnees = $reponse->fetch()) {
-                    echo '<optgroup label="', $donnees['nom'], '">', $donnees2['nom'], '</option>';
+                    echo '<optgroup label="', $donnees['nom'], '">', $donnees['nom'], '</option>';
                     $reponse2 = $bdd->query('SELECT * FROM `departement` ORDER BY `numero`');
                     while ($donnees2 = $reponse2->fetch()) {
                         echo '<option value="', $donnees2['nom'], '">', $donnees2['nom'], '</option>';
@@ -41,7 +40,7 @@
                 <input type="radio" name="theme" id="Musées" /> <label for="Musées">Musées</label><br />
                 <input type="radio" name="theme" id="Lieux" /> <label for="Lieux">Lieux Publics</label><br />
                 <input type="radio" name="theme" id="Activité" /> <label for="Activité">Activités Sportives</label><br />
-                <input type="radio" name="theme" id="Autre" /> <label for="Autre">Autre</label><br />
+                <input type="radio" name="theme" id="Autre" /> <label for="Autre">Autre</label>
                 <input type="text" name="theme" />
             </p>
             <p>
@@ -51,13 +50,8 @@
                 <input type="radio" name="age" id="Adultes" /> <label for="Adultes">Adultes</label><br />
                 
             </p>
-        <?php   $theme=$_POST['theme'];
-                $age=$_POST['age'];
-                $region=$_POST['region'];
-                
-                $reponse3=$bdd->query('SELECT * FROM ')
-                
-            ?>
-        </p>
+            
+            <p class="submit"><input type="submit" value="Rechercher" /></p>
+        
     </form>
 </div>
