@@ -14,7 +14,7 @@
 
     while ($data = mysql_fetch_assoc($req)) {
         if (isset($_GET["ID"])==$bdd[id]) {
-            echo 'Région: $bdd[region]<br/>Description: $bdd[description]<br/> Thème: $bdd[theme]<br/> ';
+            echo 'Région: $bdd[region]<br/>Description: $bdd[description]<br/> Thème: $bdd[theme]<br/> <img src=$bdd[image]><br/>';
         }
     }
     ?>
