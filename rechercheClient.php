@@ -20,7 +20,7 @@
     <form method="post" action="traitement.php" id="form">
             <p class="first">
             <label for="pays">Choisissez votre destination </label><br />
-            <select name="département" id="département">
+            <select name="departement" id="departement">
                 <?php
                 while ($donnees = $reponse->fetch()) {
                     echo '<optgroup label="', $donnees['nom'], '">', $donnees['nom'], '</option>';
@@ -55,3 +55,29 @@
         
     </form>
 </div>
+
+<?php
+if (isset($_POST['valider'])) {
+
+    $region = htmlspecialchars($_POST['region']);
+    $theme = htmlspecialchars($_POST['theme']);
+    $age = htmlspecialchars($_POST['age']);
+    
+    $sql = 'SELECT region,age,theme FROM article ORDER BY note';
+    
+    $req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
+    
+    while($data = mysql_fetch_assoc($req))
+    {
+        if($sql['region']==$region){
+            if($sql['theme']==$theme){
+                if($sql['age']==$age){
+                    echo ''
+                }
+            }
+        }
+    }
+
+    mysql_close();
+}
+?>
