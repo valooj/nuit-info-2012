@@ -80,9 +80,19 @@ div#content{
     margin-right: auto;
     margin-top: 10px;
     padding: 4px;
-    width: 1000;
+    width: 1000px;
     
     
+}
+#form{
+    width: 500px;
+    margin: auto;
+}
+#form p.first{
+    padding-top: 20px;
+}
+#form p {
+    text-align: left;
 }
 div#footer{
     
